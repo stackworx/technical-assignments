@@ -8,7 +8,7 @@ module.exports = {
   projectName: "technical-assignments",
   scripts: [
     {
-      src: "/js/fix-location.js",
+      src: "/technical-assignments/js/fix-location.js",
       async: false,
       defer: false,
     },
