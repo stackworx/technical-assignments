@@ -6,6 +6,13 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "stackworx",
   projectName: "technical-assignments",
+  scripts: [
+    {
+      src: "/js/fix-location.js",
+      async: false,
+      defer: false,
+    },
+  ],
   themeConfig: {
     navbar: {
       title: "Stackworx Technical Assignments",
