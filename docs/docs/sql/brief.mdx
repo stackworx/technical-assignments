@@ -1,0 +1,43 @@
+---
+title: Brief
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+Please install the [required](requirements) tools before continuing
+
+The goal of this assignment is to test your SQL proficiency.
+
+First download the project zip from <a href={useBaseUrl('project/sql-master.zip')}>here</a>.
+
+Unzip the file and check the README.md to get going.
+
+#### Requirements
+
+- You will only be required to submit your SQL code, and not the generated data or answers as well.
+- backup_1_place_id and backup_2_place_id is only used for R5.
+- merit is only used for R6.
+
+- R1. Write a query which determines the personnel member that made the most visits. Return only 1 row.
+- R2. Write a query which determines the place that each personnel visited the most times. Include the count of times that each personnel visited their most visited place.
+- R3. Write a query which will determine if a personnel visited all available places. Each personnel-place combination must be represented in the query result by a boolean, which indicates if the personnel visited that place or not.
+- R4. Write a query which will return the total distance (in degrees or in kilometers) travelled by each of the personnel in the last 90 days.
+- R5. Add foreign keys between personnel_whereabouts and personnel, as well as between personnel_whereabouts and place. Between personnel_whereabouts and place multiple foreign keys will be required.
+- R6. If a personnel visits a place, and the personnel and the place's "method" align (i.e personnel.method = "MethodA" and place.method = "MethodA"), the personnel receives double merit for the visit.
+Given this, determine the end merit balance of each personnel. A normal visit counts as a single merit.
+- R7. Write a query which will return all place data for all places within 500km of Pretoria Gautrain Station.
+
+### Bonus Requirements:
+
+- B1. Add 3x indices to personnel_whereabouts and explain in code comments why the 3x indices you selected were the most important for improving database performance.
+- B2. Determine the productivity of personnel_id 1. This can be done by creating a timeline of 1 hour buckets of the personnel's activity,
+and seeing if a visit was made in that hour. If yes, it will be counted as a productive hour. In the last 90 days, how productive (%) was personnel_id 1. You can assume this personnel member is an autonomous vehicle and does not rest at all.
+- B3. Determine what the longest period of time is that each personnel stayed at the same place consecutively.
+Only if the same place was the next visited place (next personnel_whereabouts entry in a timeline), will it count for a consecutive visit. Each personnel will have a different (or the possibly the same) place that they spent the most time at without leaving.
+- B4. Write a function which takes a personnel_id as input, and returns the response of B2 for that personnel_id.
+- B5. In your own way, determine which personnel member was the most productive. Explain in code comments why this is the case.
+
+
+### Help
+
+Send an email to <assignment@stackworx.io> if you get stuck
