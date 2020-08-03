@@ -1,0 +1,46 @@
+---
+title: Brief
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+Please install the [required](requirements) tools before continuing
+
+The goal of this assignment is to test your python proficiency, through doing what python does best - a bit of everything.
+The project is comprised of 2 parts.
+- Nominatim: An address lookup service used widely in the community. This service takes a geo-coordinate and returns an address.
+- Postgres Table to Flask REST interface: This enables interaction with a data table, by making it available through a GET request in JSON.
+
+First download the project zip from <a href={useBaseUrl('project/python-master.zip')}>here</a>.
+
+Unzip the file and check the README.md to get going.
+
+#### Requirements
+
+- You will only be required to submit your code, and not the generated data as well.
+
+Part 1:
+- Write a Flask endpoint, which takes a geo-coordinate (lat, lng) as input, and returns the physical address of the coordinate as JSON output.
+- Conversely, write a Flask endpoint which will take an address, and return the geo-coordinates (lat,lng) for that address.
+- You can use the provided Nominatim for the address lookup, or any alternative API service. The config for Nominatim is currently set to Maldives, so be sure to change that to South Africa, to retrieve more relevant data.
+- You will need to read through the Nominatim API to understand how to use it. See the README for more information.
+- Be sure to include appropriate error handling and tests.
+
+Part 2:
+- Be sure to have run the Data Setup part of the README. You should have 150000 rows in a table called amazing_report_3.
+- Write a service in Python, which connects directly to the Postgres database, and reads the table amazing_report_3.
+- Make a Flask endpoint available which converts the test dataset into JSON, and return it to POSTMAN or browser window.
+- Be sure to treat the table to possibly have dynamic column names, and therefore don't hardcode column names in your code.
+- This endpoint should be able to take any table in the database, and convert it to JSON, and return it through the Flask endpoint.
+- Be sure to include appropriate error handling and tests.
+
+### Bonus Requirements:
+
+- Optimise your Database to REST JSON code to beat our version. We will time your function on our standard machine and let you know how you score.
+- Loop through each of the 150000 rows in the test dataset and populate the address column from the Nominatim response.
+- Document your endpoints using Swagger/ OpenAPI.
+- Rate limit the Nominatim API to a variable requests per hour, and set the default to 100 requests per hour.
+
+### Help
+
+Send an email to <assignment@stackworx.io> if you get stuck
