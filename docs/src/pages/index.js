@@ -35,6 +35,14 @@ function useFeatures() {
       title: <>C#</>,
       imageUrl: "img/csharp.png",
     },
+    {
+      title: <>Python</>,
+      imageUrl: "img/python.png",
+    },
+    {
+      title: <>SQL</>,
+      imageUrl: "img/sql.png",
+    },
   ];
 }
 
