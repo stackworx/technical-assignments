@@ -2,7 +2,7 @@
 title: Brief
 ---
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Please install the [required](requirements) tools before continuing
 
@@ -14,7 +14,7 @@ Open the solution in Visual Studio
 
 ### Requirements
 
-- Use the standard library or a library of your choosing to do a get request against the server health check URI's embedded in the project. Consider any non 2xx response a failure
+- Use [IHttpClientFactory](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1) to implement the resolver for the server status field. (There is a TODO to mark this area) - Consider any non 2xx response a failure
 - These results should be automatically fetched every 5 minutes (hint: use a lower value during testing)
 - Make sure the fetch request timeout is lower than 5 minutes
 - Make the health check calls in parallel
