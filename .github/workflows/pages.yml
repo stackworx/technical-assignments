@@ -18,4 +18,4 @@ jobs:
           yarn deploy
         working-directory: docs
         env:
-          GIT_USER: ${{ secrets.ACCESS_TOKEN }}
+          GIT_USER: ${{ secrets.PAGES_ACCESS_TOKEN }}
