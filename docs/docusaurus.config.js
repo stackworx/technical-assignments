@@ -5,6 +5,7 @@ module.exports = {
   baseUrl: "/technical-assignments/",
   favicon: "img/favicon.ico",
   organizationName: "stackworx",
+  trailingSlash: false,
   projectName: "technical-assignments",
   scripts: [
     {
@@ -20,7 +21,7 @@ module.exports = {
         alt: "Logo",
         src: "img/logo.svg",
       },
-      links: [
+      items: [
         {
           to: "docs/getting-started",
           activeBasePath: "docs",
